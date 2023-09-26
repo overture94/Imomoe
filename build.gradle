@@ -3,7 +3,7 @@
 buildscript {
     apply from: 'version.gradle'
     ext {
-        secret = "${rootDir}/secret.gradle"
+//        secret = "${rootDir}/secret.gradle"
         andresguard = "${rootDir}/andresguard.gradle"
         kotlin_version = '1.4.32'
     }

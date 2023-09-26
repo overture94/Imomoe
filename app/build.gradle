@@ -6,16 +6,16 @@ plugins {
     id 'com.efs.sdk.plugin'
 }
 
-apply from: secret
+//apply from: secret
 apply from: andresguard
 
 android.defaultConfig {
-    secret.buildConfigField.forEach({ k, v ->
-        buildConfigField("String", k, "\"${v}\"")
-    })
-    secret.shieldTextList.forEach({ k, v ->
-        buildConfigField("String[]", k, v)
-    })
+//    secret.buildConfigField.forEach({ k, v ->
+//        buildConfigField("String", k, "\"${v}\"")
+//    })
+//    secret.shieldTextList.forEach({ k, v ->
+//        buildConfigField("String[]", k, v)
+//    })
 }
 
 android {
@@ -45,18 +45,18 @@ android {
             abiFilters 'armeabi'
         }
 
-        manifestPlaceholders = secret.manifestPlaceholders
+//        manifestPlaceholders = secret.manifestPlaceholders
 
         resConfigs "xxxhdpi", "anydpi-v26"
     }
 
     signingConfigs {
-        release {
-            keyAlias secret.sign.RELEASE_KEY_ALIAS
-            keyPassword secret.sign.RELEASE_KEY_PASSWORD
-            storeFile file('../key.jks')
-            storePassword secret.sign.RELEASE_STORE_PASSWORD
-        }
+//        release {
+//            keyAlias secret.sign.RELEASE_KEY_ALIAS
+//            keyPassword secret.sign.RELEASE_KEY_PASSWORD
+//            storeFile file('../key.jks')
+//            storePassword secret.sign.RELEASE_STORE_PASSWORD
+//        }
     }
 
     productFlavors {
@@ -83,7 +83,7 @@ android {
             }
         }
         release {
-            signingConfig signingConfigs.release    //签名
+//            signingConfig signingConfigs.release    //签名
             minifyEnabled true
             zipAlignEnabled true
             shrinkResources true       // 使用keep.xml，keep住皮肤文件

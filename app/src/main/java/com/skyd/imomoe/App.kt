@@ -34,14 +34,14 @@ class App : Application() {
 
             // 友盟
             // 初始化组件化基础库, 所有友盟业务SDK都必须调用此初始化接口。
-            UMConfigure.init(
-                this,
-                getManifestMetaValue("UMENG_APPKEY"),
-                getManifestMetaValue("UMENG_CHANNEL"),
-                UMConfigure.DEVICE_TYPE_PHONE,
-                BuildConfig.UMENG_MESSAGE_SECRET
-            )
-            UMConfigure.setLogEnabled(BuildConfig.DEBUG)
+//            UMConfigure.init(
+//                this,
+//                getManifestMetaValue("UMENG_APPKEY"),
+//                getManifestMetaValue("UMENG_CHANNEL"),
+//                UMConfigure.DEVICE_TYPE_PHONE,
+//                BuildConfig.UMENG_MESSAGE_SECRET
+//            )
+//            UMConfigure.setLogEnabled(BuildConfig.DEBUG)
 
             // 选择AUTO页面采集模式，统计SDK基础指标无需手动埋点可自动采集。
             MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO)

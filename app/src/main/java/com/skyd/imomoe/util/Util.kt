@@ -100,7 +100,8 @@ object Util {
     fun getUserNoticeContent(): String {
         val sb = StringBuffer()
         try {
-            val inputStream = App.context.resources.openRawResource(R.raw.notice)
+//            val inputStream = App.context.resources.openRawResource(R.raw.notice)
+            val inputStream = App.context.resources.openRawResource(R.raw.keep)
             val reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
             var out: String?
             while (reader.readLine().also { out = it } != null) {

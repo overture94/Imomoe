@@ -51,12 +51,12 @@ android {
     }
 
     signingConfigs {
-//        release {
-//            keyAlias secret.sign.RELEASE_KEY_ALIAS
-//            keyPassword secret.sign.RELEASE_KEY_PASSWORD
-//            storeFile file('../key.jks')
-//            storePassword secret.sign.RELEASE_STORE_PASSWORD
-//        }
+        release {
+            keyAlias "key"
+            keyPassword "overture"
+            storeFile file('../key.jks')
+            storePassword "overture"
+        }
     }
 
     productFlavors {
@@ -83,7 +83,7 @@ android {
             }
         }
         release {
-//            signingConfig signingConfigs.release    //签名
+            signingConfig signingConfigs.release    //签名
             minifyEnabled true
             zipAlignEnabled true
             shrinkResources true       // 使用keep.xml，keep住皮肤文件

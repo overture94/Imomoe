@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">樱花动漫</string>
+<!--    <string name="app_name">樱花动漫</string>-->
+    <string name="app_name">Imomoe</string>
     <string name="home_fragment_header_search">搜索</string>
     <string name="press_again_to_exit">再按一次退出</string>
     <string name="currently_not_supported">目前尚未支持</string>
